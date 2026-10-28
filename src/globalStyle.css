@@ -1,0 +1,44 @@
+:root {
+  --bgColor: #acd7ff;
+  --corkBoard: #d8a47c;
+  /* MAybe just add a background img for texture? - if so fix opacity */
+  --postItNote: #ffffc4;
+  --noteShade: #9b8c71;
+  --color: #121212;
+
+  /* Darkmode */
+  --bgColorD: rgb(99, 22, 22);
+  /* Note! Add a linear gradient to the background and footer so that it looks like it's lit up but lots of little candles.*/
+  --corkboardD: #89543d;
+  --darkNote: #e78a00;
+  --colorD: #2e0459;
+}
+
+body {
+  background-color: var(--bgColor);
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+/* spave for darkMode styling */
+.bodyDarkMode {
+  background-color: var(--bgColorD);
+}
+
+#root {
+  width: 75vw;
+  background-color: var(--corkBoard);
+  background-image: url(https://cdn2-optimize.wolfgordon.com/production/product/swatches/cork-339.jpg?w=768&h=768&fm=jpg&auto=compress&fit=crop&dm=1784736057&s=aae6e6c3ba6691aa2cc3497ee2b1a49e);
+  background-blend-mode: overlay;
+  opacity: 0.94;
+  border: 10px groove #e3bd9d;
+  margin: 3em auto;
+  padding: 2em;
+  text-align: center;
+  min-height: 40em;
+}
+
+h1 {
+  color: rgb(49, 49, 49);
+}

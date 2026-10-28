@@ -17,6 +17,10 @@
 8. Create the Light-Dark theme toggle with useCOntext as well, note -> wrap everythin gin application inside it, icluding the toDoProvider. []
 9. Css styling! Do some as you go add details later.
 10. cleanup comments, notes and DRY the code as much as possible. []
+11. if time translate the assignment text. []
+12. Little thought on design idea: Can I make the list display like little post-it notes on a memo board, bright mode it's as if in a bright room with cosy colors in broad daylight, dark mode = light out, vibe is we're summoning a demon or an eldritch terror for halloween by finisheing our tasks. []
+
+- Note if I go for this design idea, I could add a progress bar? Also make certain to change the favIcon with the dark mode?
 
 ## Assignment text(Norwegian for now):
 
