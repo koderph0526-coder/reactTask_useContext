@@ -3,6 +3,7 @@ import "./App.css";
 import { ToDoProvider } from "./context/ToDoContex";
 import ToDoForm from "./components/ToDoForm";
 import ToDoCard from "./components/ToDoCard";
+import ThemeToggleButton from "./components/ThemeToggle";
 
 function App() {
   // I would like to add a little line at the topo of the screen that keeps thack of how many tasks are "active"(not finished)
@@ -10,14 +11,17 @@ function App() {
   //Can I also add a progress bar at some point?
 
   return (
-    <ToDoProvider>
-      <h1>My ToDo List</h1>
-      <div>
-        {/* Div for styling purposes */}
+    <>
+      {/* <ThemeToggleButton /> */}
+      <ToDoProvider>
+        <h1>My ToDo List</h1>
         <ToDoForm />
-        <ToDoCard />
-      </div>
-    </ToDoProvider>
+        {/* Div for styling purposes */}
+        <div className="postSpace">
+          <ToDoCard className="postIt" />
+        </div>
+      </ToDoProvider>
+    </>
   );
 }
 

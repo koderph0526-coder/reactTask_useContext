@@ -22,8 +22,9 @@ body {
 }
 
 /* spave for darkMode styling */
-.bodyDarkMode {
+.dark {
   background-color: var(--bgColorD);
+  color: var(--colorD);
 }
 
 #root {

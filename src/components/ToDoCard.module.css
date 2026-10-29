@@ -1,8 +1,37 @@
-.toDoItem {
+:root .toDoItem {
   cursor: pointer;
   text-decoration: none;
 }
 
 .toDoItem.completed {
   text-decoration: line-through;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 20em;
+  height: 5em;
+  box-shadow: 3px 6px 6px rgb(121, 65, 40);
+  background-color: var(--postItNote);
+  margin: 1em;
+  padding: 2em 1em;
+}
+
+button {
+  background-color: var(--postItNote);
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.postItgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80vw;
 }

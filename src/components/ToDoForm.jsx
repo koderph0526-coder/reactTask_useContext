@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useToDos } from "../context/ToDoContex";
+//  Testing something from a google search:
 
 export default function ToDoForm() {
   const [input, setInput] = useState("");
-  const { addToDo } = useToDos; //Destucturing action form the global context
+  const { addToDo } = useToDos(); //Destucturing action form the global context
 
-  //  Testing something from a google search:
   const submitToDo = (e) => {
     e.preventDefault();
     if (!input.trim()) return;

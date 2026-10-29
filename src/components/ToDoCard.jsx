@@ -6,17 +6,20 @@ export default function ToDoCard() {
 
   return (
     <>
-      <ul>
+      <ul className="postItGrid">
         {toDos.map((todo) => (
-          <li key={todo.id}>
-            <span
-              onClick={() => toggleToDo(todo.id)}
-              className={`styles.toDoItem.${todo.completed ? "completed" : ""}`}
-            >
-              {todo.text}
-            </span>
-            <button onClick={() => deleteToDo(todo.id)}>❌</button>
-          </li>
+          <div className="postItGrid">
+            <li key={todo.id}>
+              <span
+                onClick={() => toggleToDo(todo.id)}
+                className={`styles.toDoItem.${todo.completed ? "completed" : ""}`}
+              >
+                {todo.text}
+              </span>
+              <input type="checkbox" />
+              <button onClick={() => deleteToDo(todo.id)}>❌</button>
+            </li>
+          </div>
         ))}
       </ul>
     </>
