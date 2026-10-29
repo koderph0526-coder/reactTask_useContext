@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 //storing the context function we "create" in a named var for ease of use and no props drilling.
 const ThemeContext = createContext();
