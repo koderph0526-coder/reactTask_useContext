@@ -2,16 +2,16 @@ import { useToDos } from "../context/ToDoContex";
 import styles from "./ToDoCard.module.css";
 
 export default function ToDoCard() {
-  const { todos, toggleToDo, deleteToDo } = useToDos();
+  const { toDos, toggleToDo, deleteToDo } = useToDos();
 
   return (
     <>
       <ul>
-        {todos.map((todo) => (
+        {toDos.map((todo) => (
           <li key={todo.id}>
             <span
               onClick={() => toggleToDo(todo.id)}
-              className={`toDoItem ${todo.completed ? "completed" : ""}`}
+              className={`styles.toDoItem.${todo.completed ? "completed" : ""}`}
             >
               {todo.text}
             </span>
