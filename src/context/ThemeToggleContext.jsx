@@ -14,5 +14,34 @@ export function ThemeProvider({ children }) {
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "bright" ? "dark" : "bright"));
   };
-  return <></>;
+
+  //google quote: Keep attributes and localstorage in sync with the current theme
+  useEffect(() => {
+    localStorage.setItem("appTheme", theme);
+    // note I've never used this before so I actually do not know what it does O.o
+    document.documentElement.setAttribute("data-theme", theme);
+
+    //Google says this is optional if using class based styling, which I belive is what I do indeed.
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      // May need to add a bright class here instead?
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }
+
+//Custom hook for ease of use and cleaner synatx
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error("the useTheme must be used within a ThemeProvider");
+  }
+  return context;
+};
