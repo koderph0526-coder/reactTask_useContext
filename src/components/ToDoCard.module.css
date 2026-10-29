@@ -1,0 +1,8 @@
+.toDoItem {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.toDoItem.completed {
+  text-decoration: line-through;
+}

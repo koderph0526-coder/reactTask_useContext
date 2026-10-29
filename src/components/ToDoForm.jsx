@@ -15,11 +15,11 @@ export default function ToDoForm() {
 
   return (
     <>
-      <form>
+      <form onSubmit={submitToDo}>
         <input>
           type="text" value="{input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder:"Add your task here..."
+          placeholder:"Add your task here..." required
         </input>
         <button type="submit">Add task</button>
       </form>
