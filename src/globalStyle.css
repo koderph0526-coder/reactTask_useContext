@@ -39,6 +39,10 @@ h1 {
   opacity: 1;
 }
 
+footer {
+  display: none;
+}
+
 /* space for darkMode styling */
 .darkBody {
   background-image: linear-gradient(#631616, #8d1e1e, #a71717);
@@ -48,5 +52,23 @@ h1 {
   }
   .postIt {
     background-color: var(--darkNote);
+  }
+  footer {
+    background-image: linear-gradient(
+      #4f0c0c,
+      #a01a1a,
+      #ea5029,
+      #a01818,
+      #4f0c0c,
+      #a53030,
+      #de2f14,
+      #ce0a0a,
+      #8a0f0f,
+      #4f0c0c,
+      #882817,
+      #ef6318,
+      #a51717,
+      #4f0c0c
+    );
   }
 }

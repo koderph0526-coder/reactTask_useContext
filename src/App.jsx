@@ -15,6 +15,8 @@ function App() {
       {/* <ThemeToggleButton /> */}
       <ToDoProvider>
         <h1>My ToDo List</h1>
+        {/* Replace with a light swtich? */}
+        <button>Mode Switch</button>
         <ToDoForm />
         {/* Div for styling purposes */}
         <div className="postSpace">
