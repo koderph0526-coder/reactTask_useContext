@@ -2,26 +2,30 @@ import { useToDos } from "../context/ToDoContex";
 import styles from "./ToDoCard.module.css";
 
 export default function ToDoCard() {
-  const { toDos, toggleToDo, deleteToDo } = useToDos();
+  const { toDos, toggleToDo, deleteTask } = useToDos();
 
   return (
-    <>
-      <ul className="postItGrid">
+    <div>
+      <ul className={styles.postItgrid}>
         {toDos.map((todo) => (
-          <div className="postItGrid">
+          <div>
             <li key={todo.id}>
               <span
                 onClick={() => toggleToDo(todo.id)}
-                className={`styles.toDoItem.${todo.completed ? "completed" : ""}`}
+                className={todo.completed ? styles.completed : styles.toDoItem}
               >
                 {todo.text}
               </span>
-              <input type="checkbox" />
-              <button onClick={() => deleteToDo(todo.id)}>❌</button>
+              <input
+                type="checkbox"
+                checked={todo.completed}
+                onChange={() => toggleToDo(todo.id)}
+              />
+              <button onClick={() => deleteTask(todo.id)}>❌</button>
             </li>
           </div>
         ))}
       </ul>
-    </>
+    </div>
   );
 }

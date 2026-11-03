@@ -7,7 +7,7 @@
   --color: #121212;
 
   /* Darkmode */
-  --bgColorD: rgb(99, 22, 22);
+  --bgColorD: #631616;
   /* Note! Add a linear gradient to the background and footer so that it looks like it's lit up but lots of little candles.*/
   --corkboardD: #89543d;
   --darkNote: #e78a00;
@@ -19,12 +19,6 @@ body {
   /* display: flex;
   flex-direction: column;
   align-items: center; */
-}
-
-/* spave for darkMode styling */
-.dark {
-  background-color: var(--bgColorD);
-  color: var(--colorD);
 }
 
 #root {
@@ -43,4 +37,16 @@ body {
 h1 {
   color: rgb(49, 49, 49);
   opacity: 1;
+}
+
+/* space for darkMode styling */
+.darkBody {
+  background-image: linear-gradient(#631616, #8d1e1e, #a71717);
+  color: var(--colorD);
+  #root {
+    background-color: var(--corkboardD);
+  }
+  .postIt {
+    background-color: var(--darkNote);
+  }
 }

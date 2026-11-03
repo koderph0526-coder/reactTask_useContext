@@ -1,11 +1,13 @@
-// export default function ThemeToggle() {
+//My attempt at making a button activate the themToggleContext
 
-//   return (
-//     <>
+export default function ThemeToggle() {
 
-//     </>
-//   );
-// }
+  return (
+    <>
+
+    </>
+  );
+}
 
 //Borrowed straight out of a google code, below is copy-paste which I may alter to try to get it to work...
 // const ThemeToggleButton = () => {
